@@ -1,0 +1,6 @@
+<%= form_with model: @city, method: "get" do |form| %>
+  <%= form.text_field :city %>
+  <%= form.text_field :landmark %>
+  <%= form.text_field :population %>
+    <%= form.submit "Create" %>
+<% end %>

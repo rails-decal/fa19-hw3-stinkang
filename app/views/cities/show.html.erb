@@ -1,0 +1,13 @@
+<% if @city == nil %>
+  <% City.all.each_key do |key| %>
+    <%= City.all[key].name %> <br>
+    <%= City.all[key].landmark %>
+    <%= City.all[key].population %> <br>
+    <%= City.all[key].weather %> <br>
+  <% end %>
+<% else %>
+<%= City.all[@city.to_sym].name %> <br>
+<%= City.all[@city.to_sym].landmark %>
+<%= City.all[@city.to_sym].population %> <br>
+<%= City.all[@city.to_sym].weather %> <br>
+<% end %>

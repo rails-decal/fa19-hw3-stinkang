@@ -1,1 +1,11 @@
+
 <!-- Your code here -->
+<% City.all.each_key do |key|  %>
+  <p> The weather in <%= City.all[key].name.capitalize %> degrees Fahrenheit</p>
+<% end %>
+<%= form_with local: true, method: "get" do |form| %>
+  <%= form.text_field :city %>
+  <%= form.text_field :landmark %>
+  <%= form.text_field :population %>
+    <%= form.submit %>
+<% end %>
